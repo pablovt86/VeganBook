@@ -80,16 +80,16 @@
 
           <div>
             <p>Encuentranos en las redes</p>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-facebook"></i>
             </a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-twitter"></i>
             </a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-linkedin"></i>
             </a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-instagram"></i>
             </a>
             <p>2020 © VeganBook.com Todos los derechos reservados </p>

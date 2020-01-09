@@ -1,4 +1,4 @@
- @extends('layouts.base')
+ @extends('layouts.pista')
 
 @section('content')
 <head>

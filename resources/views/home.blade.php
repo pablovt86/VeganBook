@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -21,23 +19,35 @@
 
     </head>
     <body>
-        {{-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}"></a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}"></a>
-                        @endif
-                    @endauth
-                </div>
-            @endif --}}
+       
 
             <div class="content">
-             
+                <section id="nav-bar">
+
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/"><img src="/imagenes/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="almacen/articulo">importar articulo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="almacen/categoria">importar categoria</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="ventas/cliente">Nuestro Cliente</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/faqs">FAQS</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+    
+                  </section>
 
               <section id="banner">
                 <div class="container">
@@ -55,6 +65,20 @@
             </div>
         </div>
         <footer class="footer">
+              <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}"></a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}"></a>
+                        @endif
+                    @endauth
+                </div>
+            @endif 
 
           <div>
             <p>Encuentranos en las redes</p>
@@ -80,4 +104,4 @@
     </body>
 </html>
 
-@endsection
+
