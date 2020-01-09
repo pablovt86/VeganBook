@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ve ganbook</title>
+        <title>Veganbook</title>
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/welcome.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,10 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
 
     </head>
     <body>
@@ -64,8 +61,6 @@
 
               </section>
 
-              <!------------------------banner section---------------------->
-
               <section id="banner">
                 <div class="container">
                   <div class="row">
@@ -81,11 +76,9 @@
 
             </div>
         </div>
-
-        <!-- Footer -->
         <footer class="footer">
 
-          <div class="col-lg-4 mb-5 mb-lg-0">
+          <div>
             <p>Encuentranos en las redes</p>
             <a class="btn btn-outline-light btn-social mx-1" href="#">
               <i class="fa fa-facebook"></i>
@@ -99,10 +92,6 @@
             <a class="btn btn-outline-light btn-social mx-1" href="#">
               <i class="fa fa-instagram"></i>
             </a>
-          </div>
-
-
-          <div class="copyright">
             <p>2020 © VeganBook.com Todos los derechos reservados </p>
           </div>
 
