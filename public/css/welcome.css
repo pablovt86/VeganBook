@@ -78,3 +78,19 @@ body
   width: 100%;
   padding-top: 130px;
 }
+
+/*----------------------Footer section--------------------*/
+
+.footer
+{
+
+  padding-top: 1,25rem;
+
+  text-align: center;
+
+}
+
+.col-lg-4 mb-5 mb-lg-0
+{
+  align-content: space-around;
+}

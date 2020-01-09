@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
         <!-- Fonts -->
@@ -39,7 +40,7 @@
               <section id="nav-bar">
 
                 <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img src="/css/images/logo.png"></a>
+            <a class="navbar-brand" href="#"><img src="/imagenes/logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <i class="fa fa-bars"></i>
             </button>
@@ -78,10 +79,39 @@
                     </div>
                   </div>
                 </div>
-                <img src="curvas.png" class="bottom-img">
+                <img src="/imagenes/curvas.png" class="bottom-img">
               </section>
 
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <p>Encuentranos en las redes</p>
+            <a class="btn btn-outline-light btn-social mx-1" href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-outline-light btn-social mx-1" href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-outline-light btn-social mx-1" href="#">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a class="btn btn-outline-light btn-social mx-1" href="#">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+
+
+          <div class="copyright">
+            <p>2020 © VeganBook.com Todos los derechos reservados </p>
+          </div>
+
+
+        </footer>
+
+
     </body>
 </html>
