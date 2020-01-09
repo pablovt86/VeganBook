@@ -24,3 +24,11 @@ Route::resource('ventas/cliente','ClienteController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/aboutUs', function ()
+{
+    return view('aboutus');
+});
+Route::get('/faqs', function ()
+{
+    return view('faqs');
+});

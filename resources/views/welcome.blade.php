@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>veganbook</title>
+        <title>Ve ganbook</title>
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/welcome.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -39,26 +39,23 @@
               <section id="nav-bar">
 
                 <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img src="/css/images/logo.png"></a>
+            <a class="navbar-brand" href="#"><img src="..\imagenes\logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <i class="fa fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Acerca de veganbook</a>
+                  <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" a href="/noticias">Novedades</a>
+                  <a class="nav-link" href="{{ route('register') }}">Register</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"   <a href="{{ route('login') }}">Login</a>
+                  <a class="nav-link" href="/aboutUs">Acerca de Veganbook</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"  <a href="{{ route('register') }}">Register</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Faq's</a>
+                  <a class="nav-link" href="/faqs">FAQS</a>
                 </li>
               </ul>
             </div>
@@ -78,10 +75,22 @@
                     </div>
                   </div>
                 </div>
-                <img src="curvas.png" class="bottom-img">
+                <img src="..\imagenes\curvas.png" class="bottom-img">
               </section>
 
             </div>
         </div>
+        <!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+  <div class="container">
+    
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#"> Veganbook.com</a>
+    </div>
+
+  </div>
+
+
+</footer>
     </body>
 </html>
