@@ -37,7 +37,11 @@
                       <div  id="primeraParte"> <!-- pais  este dato no se guardara-->
                           <label for="s-selectPaises">Pais</label>
                           <select name="cod_pais" id="s-selectPaises">
-                             
+                             <option value="argentina">argentina</option>
+                             <option value="brasil">brasil</option>
+                             <option value="alemania">alemania</option>
+                             <option value="bulgaria">bulgaria</option>
+                             <option value="colombia">colombia</option>
                           </select>
                           <span>solo disponible en argentina</span>
                           <br>
@@ -47,12 +51,8 @@
                         <div class="form-group row"> <!-- name -->
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input id="name" type="text" class="form-control"  name ="name"  value="{{ old('name') }}"  autocomplete="name" autofocus>
+                                
                             </div>
                         </div>
 
@@ -169,6 +169,7 @@
     </div>
 </div>
 @endsection
+<script src="js/errores.js"></script>
 <script src="js/validar.js"></script>
 
 </body> 
