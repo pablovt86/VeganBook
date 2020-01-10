@@ -72,8 +72,12 @@ body
   text-align: center;
 }
 .p{
-  font-size: 19px;
+  font-family: Pacifico;
+  font-size: x-large;
 }
+
+
+
 .bottom-img{
   width: 100%;
   padding-top: 130px;
@@ -93,4 +97,15 @@ body
 .col-lg-4 mb-5 mb-lg-0
 {
   align-content: space-around;
+}
+
+.encuentra
+{
+font-family: Pacifico;
+font-size: larger;
+}
+
+.piepagina
+{
+  padding-top: 4rem;
 }

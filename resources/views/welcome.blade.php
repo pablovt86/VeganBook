@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Veganbook</title>
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/welcome.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -79,7 +80,9 @@
         <footer class="footer">
 
           <div>
-            <p>Encuentranos en las redes</p>
+            <div class="encuentra">
+            Encuentranos en las redes
+            </div>
             <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-facebook"></i>
             </a>
@@ -92,7 +95,9 @@
             <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-instagram"></i>
             </a>
+            <div class="piepagina">
             <p>2020 © VeganBook.com Todos los derechos reservados </p>
+            </div>
           </div>
 
 
