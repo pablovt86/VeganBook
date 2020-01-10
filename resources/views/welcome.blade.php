@@ -13,8 +13,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#carrusel').bxSlider({
+          sliderWidth:1200
+        });
+      });
+    </script>
+
+
 
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+<style>
+#carrusel{
+
+  width:120px;
+  margin: 0 auto;
+}
+</style>
 
     </head>
     <body>
@@ -66,11 +86,30 @@
                   <div class="row">
 
                     <div class="col-md-12">
+                      
+                      
                       <p class="promo-title">VEGANBOOK</p>
                       <p class="text-center p">Comenza a vivir la experiencia del veganismo</p>
+
+
+                      <div id ="carrusel">
+
+                        <div> <img src="css/images/01.jpg"  alt=""></div>
+                        <div> <img src="css/images/02.jpg" alt=""></div>
+                        <div> <img src="css/images/03.jpg" alt=""></div>
+                        <div> <img src="css/images/04.jpg" alt=""></div>
+                        <div> <img src="css/images/05.jpg" alt=""></div>
+                        <div> <img src="css/images/06.jpg" alt=""></div>
+                       </div>
+                      
+            
+
+
                     </div>
                   </div>
                 </div>
+                
+            
                 <img src="/imagenes/curvas.png" class="bottom-img">
               </section>
 
@@ -94,6 +133,7 @@
             </a>
             <p>2020 © VeganBook.com Todos los derechos reservados </p>
           </div>
+
 
 
         </footer>

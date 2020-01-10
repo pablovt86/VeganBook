@@ -23,6 +23,7 @@ Route::resource('ventas/cliente','ClienteController');
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/aboutUs', function ()
 {

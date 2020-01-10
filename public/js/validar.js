@@ -1,3 +1,4 @@
+
 function nuevoAjax(){
 	var xmlhttp=false;
 	try
@@ -247,7 +248,7 @@ window.onload = function() {
   document.getElementById('Errores').style.display='none';
   document.getElementById('Exitoso').style.display='none';
 
-  cargarAjax('GET', 'https://api.printful.com/countries', 's-selectPaises', selectPaises);
+  cargarAjax('GET', 'http://pilote.techo.org/?do=api.getPaises', 's-selectPaises', selectPaises);
 
   var botton=document.getElementById('btn-siguienteSeccion');
    botton.onclick = function() { siguienteSeccion();  };
@@ -283,5 +284,9 @@ window.onload = function() {
 				 console.log(log);
 				}
 	 });
+
+
+
+	 
 
 }
