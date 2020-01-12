@@ -51,15 +51,22 @@ class ArticuloController extends Controller
     return Redirect('almacen/articulo');
 
   }
+  
   public function show($id){
     return view('almacen.articulo.show',["articulo"=>Articulo::findOrFail($id)]);
   }
-
+ // en el edit traigo el a id de articulo
+ //y la la condicion = 1 que me lo triga 
+ //y lo envio por paramentro al articulo y a categoria
   public function edit($id){
     $articulo=Articulo::findOrFail($id);
     $categorias=DB::table('categoria')->where('condicion', '=','1')->get();
       return view('almacen.articulo.edit',["articulo"=>$articulo,"categorias"=>$categorias]);
   }
+  // en el update llamo a la request-articulo donde primeramente declaro la validacion correspondiente
+  //tambien traigo por la request que viaja la informacion
+  //pregunto si existe el campo file con nombre imagen que me lo guarde en imagenes/ articulos
+  
   public function update(ArticuloFormRequest $request,$id){
   $articulo=Articulo::findOrFail($id);
   $articulo->idcategoria=$request->get('idcategoria');
@@ -76,6 +83,7 @@ class ArticuloController extends Controller
   $articulo->update();
    return Redirect('almacen/articulo');
   }
+  // aca llamo
   public function destroy($id){
     $articulo=Articulo::findOrFail($id);
     $articulo->estado='inactivo';

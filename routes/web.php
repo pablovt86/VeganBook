@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/noticias', function () {
     return view('noticias');
 });
+
+//utilizo el metodo de resource por q laravel entiende q con este metodo agrupa 
+// index , show ,edit, update, destroy.!!  
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/articulo','ArticuloController');
 Route::resource('ventas/cliente','ClienteController');

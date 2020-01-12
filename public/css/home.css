@@ -1,0 +1,124 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+
+
+
+body
+{
+  font-family: sans-serif;
+ background-color: slategrey;
+}
+
+#contenedor{
+  width: 1180px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.header{
+
+ 
+  height: 85px;
+}
+
+.menu{
+
+  background-color: greenyellow;
+  height: 85px;
+}
+#contenido{
+ 
+  width: 700px;
+  height: 590px;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*  */
+aside{
+width: 470px;
+height: 1290px;
+margin-top: 10px;
+float: right;
+background:grey ;
+overflow: hidden;
+}
+
+
+#nav-bar
+{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar
+{
+  background-image: linear-gradient(to right, #99ffeb,#ffc107);
+  padding: 0!important;
+  width: 100%;
+  height: 85px;
+  
+}
+
+.navbar-brand img
+{
+  height: 50px;
+  padding-left: 20px;
+
+}
+img{
+  overflow: hidden;
+  
+}
+
+.navbar-nav li
+{
+  padding: 0 10px;
+}
+
+.navbar-nav li a
+{
+  color: #fff!important;
+  font-weight: 600;
+  float: right;
+  text-align: left;
+}
+
+.fa-bars
+{
+  color: #fff;
+  font-size: 30px !important;
+}
+
+.navbar-toggler
+{
+  outline: none !important;
+}
+
+
+
+/*----------------------Footer section--------------------*/
+
+.footer
+{
+
+  background-color: chartreuse;
+  clear: both;
+
+  text-align: center;
+  padding:20px;
+  
+}
+
+
+
