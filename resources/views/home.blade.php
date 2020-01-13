@@ -68,8 +68,9 @@
     </header>
 <nav class="menu">
 
-
-
+<div class="logo just">
+  <img src="../imagenes/logo.png" width="300px" height="150px"></a>
+</div>
 
 </nav>
       
@@ -79,12 +80,13 @@
               
                 <div id ="carrusel" >
                   <div> <img src="css/images/01.jpg"  alt=""></div>
-                  <div> <img src="css/images/02.jpg"  alt=""></div>
+                  <div> <img src="css/images/10.jfif"  alt=""></div>
                   <div> <img src="css/images/03.jpg"  alt=""></div>
-                  <div> <img src="css/images/04.png"  alt=""></div>
-                 <div> <img src="css/images/05.jpg"  alt=""></div>
-                 <div>  <img src="css/images/06.jpg"  alt=""></div> 
-                 </div>
+                  <div> <img src="css/images/09.jfif"  alt=""></div>
+                 <div> <img src="css/images/08.jfif"  alt=""></div>
+                 <div>  <img src="css/images/11.jfif"  alt=""></div> 
+ 
+                </div>
                 
 
           
@@ -93,35 +95,13 @@
          
       </article>
       </section>
-      <aside>
-      
+      <aside >
+      <div class ="noticias">
 
-        <table>
-          <thead>
-            
-            <th>Nombre</th>
-         
-           
-         
-            <th>Imagen</th>
-            <th>Opciones</th>
-  
-          </thead>
-          @foreach ($articulos as $art)
-            <tr>
-            <td>{{$art->nombre}}</td>
-          
-            <td>
-                <img src="{{asset('/imagenes/articulos/'.$art->imagen)}}" alt="{{$art->nombre}}" height="80px" width="100px" class="img-thumbnail">
-            </td>
-            <td>{{$art->estado}}</td>
-           
-            </tr>
-            
-          @endforeach
-         
-        </table> 
-        
+     <img src="" alt="">
+
+      </div>
+
   
 
       </aside>
