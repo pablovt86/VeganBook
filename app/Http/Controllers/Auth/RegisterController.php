@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -56,6 +55,7 @@ class RegisterController extends Controller
             'num_documento' =>'max:15',
             'direccion' =>'max:50',
             'telefono'=>'max:15',
+            'avatar'=>['image', 'max:2048'] 
         ]);
     }
 
@@ -73,6 +73,8 @@ class RegisterController extends Controller
             'num_documento' => $data['num_documento'],
             'direccion' => $data['direccion'],
             'telefono' => $data['telefono'],
+             'avatar' =>  $data['avatar']->store('public'),
+                
             'password' => Hash::make($data['password']),
             
         ]);

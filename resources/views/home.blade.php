@@ -68,8 +68,11 @@
     </header>
 <nav class="menu">
 
-<div class="logo just">
-  <img src="../imagenes/logo.png" width="300px" height="150px"></a>
+<div class="logo ">
+  <img src="imagenes/logo.png"  width="500px" alt="" >
+
+
+
 </div>
 
 </nav>
@@ -94,12 +97,49 @@
            
          
       </article>
+    
+
+
+      
+<article>
+
+
+<div class="row">
+
+<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+
+
+<h1 style="color:aquamarine">Nuestros Articulos</h1>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</article>
+
+
       </section>
       <aside >
+        <div class="propaganda">
+
+        </div>
       <div class ="noticias">
-
-     <img src="" alt="">
-
+        <img src="{{ $users->url_path}}" width="100px" alt="100px">
+     <br>
+     {{$users->name}}
       </div>
 
   
@@ -114,7 +154,7 @@
             </div>
             
             <p>Encuentranos en las redes</p>
-            <a class="btn btn-outline-dark btn-social mx-1" href="#">
+            <a class="btn btn-outline-dark btn-social mx-1" href="https://www.facebook.com/delfina.book.1">
               <i class="fa fa-facebook"></i>
             </a>
             <a class="btn btn-outline-dark btn-social mx-1" href="#">
@@ -144,6 +184,7 @@
              pause:1750,
             });
           });
+         
 
 
    // busca algo cuando el usuario le de click a eso ejecuta la funcion

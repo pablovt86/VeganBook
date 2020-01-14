@@ -35,7 +35,7 @@
             <div class="card">
                 <div class="card-header">{{ __('registro') }}</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" onsubmit="validacion();"   id="formulario">
+                    <form method="POST"  action="{{ route('register') }}"  enctype="multipart/form-data"  onsubmit="validacion();"   id="formulario" >
                         @csrf
                       <div  id="primeraParte"> <!-- pais  este dato no se guardara-->
                           <label for="s-selectPaises">Pais</label>
@@ -53,6 +53,15 @@
                                
                             </div>
                         </div>
+
+                        <div class="form-group row"> <!-- name -->
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right"></label>
+                            <div class="col-md-6">
+                                <input id="avatar" type="file" class="form-control" name="avatar" value="" >
+                               
+                            </div>
+                        </div>
+
                         <div class="form-group row"> <!-- email -->
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('email') }}</label>
                             <div class="col-md-6">
