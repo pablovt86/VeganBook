@@ -75,6 +75,32 @@ border:0.5px solid #000000;
  float: right;
 
 }
+.posteo{
+  height: 360px;
+  width: 700px;
+  background-image: url("images/agua.jpg");
+  background-size: cover;
+
+}
+.posteo h1{
+  position:absolute;
+  font-size: 28px;
+  left: 108px;
+  top: 70px;
+}
+.posteo img{
+  position: absolute;
+  left: 20px;
+  top: 2px;
+  border-radius: 50%;
+}
+
+.comentario{
+  position: absolute;
+  top: 105px;
+  left:40px;
+  
+}
 
 .propaganda{
   text-align: center;

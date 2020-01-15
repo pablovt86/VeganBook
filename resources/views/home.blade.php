@@ -78,6 +78,57 @@
 </nav>
       
 <section id="contenido">
+
+  <article class ="posteo">
+
+
+    <div class="row">
+    
+    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+    
+       <h1 style="color:deepskyblue"> {{$users->name}}</h1>
+      <img src="{{ $users->url_path}}" width="100px" alt="100px">
+      <textarea class="comentario" name="comentarios" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
+     
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    </article>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <article>
           
               
@@ -101,34 +152,7 @@
 
 
       
-<article>
 
-
-<div class="row">
-
-<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-
-
-<h1 style="color:aquamarine">Nuestros Articulos</h1>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-</article>
 
 
       </section>
@@ -137,9 +161,8 @@
 
         </div>
       <div class ="noticias">
-        <img src="{{ $users->url_path}}" width="100px" alt="100px">
      <br>
-     {{$users->name}}
+     
       </div>
 
   
