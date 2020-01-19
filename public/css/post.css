@@ -27,7 +27,14 @@ body
   justify-content: center;
 }
 
-
+form{
+    margin-top: 100px; 
+}
+form button{
+    position: relative;
+    float: right;
+     margin-bottom:80px;
+}
 
 
 .logo{
@@ -51,7 +58,7 @@ body
 
 
   .posteo{
-    height: 360px;
+    height: 380px;
     width: 700px;
     background-image: url("images/agua.jpg");
     background-size: cover;
@@ -60,8 +67,8 @@ body
   .posteo h1{
     position:absolute;
     font-size: 28px;
-    left: 108px;
-    top: 70px;
+    left: 115px;
+    top: 14px;
   }
   .posteo img{
     position: absolute;
@@ -76,10 +83,9 @@ body
     width: 700px;
     background-size: cover;
   
-  
-  
   }
-  
+ 
+ 
   
   
   /*  */
