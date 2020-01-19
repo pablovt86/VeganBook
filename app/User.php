@@ -4,6 +4,7 @@ namespace App;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Post;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
@@ -42,6 +43,14 @@ class User extends Authenticatable
     
     return Storage::url($this->avatar);
     }
+
+    public function posts()
+    {
+      return $this->hasMany(Post::class);
+    
+    }
+    
+
 
 
 }

@@ -32,7 +32,6 @@ body
   background-color: #fff;
   height: 150px;
   justify-content: center;
-  border:0.5px solid #000000;
 }
 
 
@@ -43,37 +42,17 @@ body
   text-align: center;
 
 }
-
+/* contenido */
 #contenido{
  
   width: 700px;
-  height: 1030px;
+  height: 1480px;
   float: left;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
   text-align: center;
   border:0.5px solid #000000;
-}
-
-
-/*  */
-aside{
-width: 470px;
-height: 1030px;
-margin-top: 10px;
-float: right;
-overflow: hidden;
-border:0.5px solid #000000;
-}
-
- .noticias{
-  text-align: center;
-  width: 278px;
-  height: 1030px;
-  border:0.5px solid grey;
- float: right;
-
 }
 .posteo{
   height: 360px;
@@ -95,12 +74,57 @@ border:0.5px solid #000000;
   border-radius: 50%;
 }
 
+
+.articulo{
+
+  height: 360px;
+  width: 700px;
+
+
+}
+
+.re-posteos{
+
+  height: 360px;
+  width: 700px;
+  background-size: cover;
+
+
+
+}
+
+
+
+/*  */
+aside{
+width: 470px;
+height: 1080px;
+margin-top: 10px;
+float: right;
+overflow: hidden;
+border:0.5px solid #000000;
+}
+
+ .noticias{
+  text-align: center;
+  width: 278px;
+  height: 1080px;
+  border:0.5px solid grey;
+ float: right;
+
+}
+
+
 .comentario{
   position: absolute;
   top: 105px;
   left:40px;
   
 }
+
+
+
+
 
 .propaganda{
   text-align: center;
@@ -160,6 +184,7 @@ border:0.5px solid #000000;
 {
   outline: none !important;
 }
+
 /* 
 #carrusel{
  

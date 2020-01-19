@@ -1,0 +1,179 @@
+
+body
+{
+  font-family: sans-serif;
+ background-color: slategrey;
+}
+
+#contenedor{
+  width: 1180px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  
+}
+
+.header{
+
+ 
+  height: 85px;
+}
+
+.menu{
+  background-image: linear-gradient(to right, rgb(56, 13, 13),#ffc107);
+  height: 150px;
+  justify-content: center;
+}
+
+
+
+
+.logo{
+
+  text-align: center;
+}
+
+/* contenido */
+#contenido{
+ 
+    width: 700px;
+    height: 1080px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border:0.5px solid #000000;
+  }
+
+
+
+  .posteo{
+    height: 360px;
+    width: 700px;
+    background-image: url("images/agua.jpg");
+    background-size: cover;
+  
+  }
+  .posteo h1{
+    position:absolute;
+    font-size: 28px;
+    left: 108px;
+    top: 70px;
+  }
+  .posteo img{
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    border-radius: 50%;
+  }
+  
+  .re-posteos{
+  
+    height: 360px;
+    width: 700px;
+    background-size: cover;
+  
+  
+  
+  }
+  
+  
+  
+  /*  */
+  aside{
+  width: 470px;
+  height: 1080px;
+  margin-top: 10px;
+  float: right;
+  overflow: hidden;
+  border:0.5px solid #000000;
+  }
+  
+   .noticias{
+    text-align: center;
+    width: 276px;
+    height: 1080px;
+    border:0.5px solid grey;
+   float: right;
+  
+  }
+  
+  
+  .comentario{
+    position: absolute;
+    top: 105px;
+    left:40px;
+    
+  }
+  
+  
+  .propaganda{
+    text-align: center;
+    width: 190px;
+    height: 1080px;
+    border:0.5px solid grey;
+    float: left;
+  }
+  
+#nav-bar
+{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar
+{
+  background-image: linear-gradient(to right, rgb(56, 13, 13),#ffc107);
+  padding: 0!important;
+  width: 100%;
+  height: 85px;
+  
+}
+
+.navbar-brand img
+{
+  height: 50px;
+  padding-left: 20px;
+
+}
+
+
+.navbar-nav li
+{
+  padding: 0 10px;
+}
+
+.navbar-nav li a
+{
+  color: #fff!important;
+  font-weight: 600;
+  float: right;
+  text-align: left;
+}
+
+.fa-bars
+{
+  color: #fff;
+  font-size: 30px !important;
+}
+
+.navbar-toggler
+{
+  outline: none !important;
+}
+/*----------------------Footer section--------------------*/
+
+.footer
+{
+
+  background-image: linear-gradient(to right, rgb(56, 13, 13),#ffc107);
+  clear: both;
+  text-align: center;
+  padding:20px;
+  border:0.5px solid #000000;
+  
+}

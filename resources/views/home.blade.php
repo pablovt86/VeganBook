@@ -80,33 +80,85 @@
 <section id="contenido">
 
   <article class ="posteo">
-
-
     <div class="row">
-    
-    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-    
+  
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+      <form  action="home" >
        <h1 style="color:deepskyblue"> {{$users->name}}</h1>
       <img src="{{ $users->url_path}}" width="100px" alt="100px">
-      <textarea class="comentario" name="comentarios" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
+      <textarea class="textarea" name="textarea" value="" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
      
-    
-    
-    
-    
-    </div>
-    
-    
-    
+      <button type="submit">enviar</button>
+      <button type="reset">borrar</button>
+    </form>
     
     
     </div>
-    
-    
-    
-    
-    
+  
+    </div>
+ 
     </article>
+   
+ <article class ="re-posteos">
+  <div class="row">   
+    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+          
+
+    </div>
+    </div>
+
+</article>
+  
+
+
+
+
+
+
+
+    <article class ="articulo">
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="table-resposive">
+            <table class="table table-striped table-bordered table-condensed table-hover">
+              <thead>
+               
+                <th>Nombre</th>
+              
+                
+                <th>Stock</th>
+                <th>Imagen</th>
+                <th>Opciones</th>
+      
+              </thead>
+              @foreach ($articulos as $art)
+                <tr>
+                <td>{{$art->nombre}}</td>
+           
+                
+                <td>{{$art->stock}}</td>
+      
+                <td>
+                    <img src="{{asset('/imagenes/articulos/'.$art->imagen)}}" alt="{{$art->nombre}}" height="50px" width="50px" class="img-thumbnail">
+                </td>
+                  <td>{{$art->estado}}</td>
+                <td>
+           
+                </tr>
+              
+              @endforeach
+            </table>
+            </div>
+          
+          </div>
+        </div>
+      
+    
+      
+      
+  
+      </article>
 
 
   
@@ -159,6 +211,10 @@
       <aside >
         <div class="propaganda">
 
+
+
+
+          
         </div>
       <div class ="noticias">
      <br>
