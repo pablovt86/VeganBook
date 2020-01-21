@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $users = Auth::User();
       
-        $articulos = Articulo::all();
+        $articulos = Articulo::paginate(5);
         
         $categorias = Categoria::paginate(3);
         return view('home',[

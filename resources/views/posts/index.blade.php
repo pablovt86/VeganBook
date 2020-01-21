@@ -106,11 +106,10 @@
                                     <form  method="POST" action="" >
                                         @csrf  
 
-                                     <h1 name ="title" value="post"  style="color:deepskyblue"> {{$users->name}}</h1>
+                                     <h1  style="color:deepskyblue"> {{$users->name}}</h1>
                                     <img src="{{ $users->url_path}}" width="100px" alt="100px">
                                     <textarea class="textarea" name="textarea" value="" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
                                     
-
                                     <button type="submit">enviar</button>
                                     <button type="reset">borrar</button>
                                   </form>
@@ -210,12 +209,13 @@
               </a>
             
   
-              <p>2020 © VeganBook.com Todos los derechos reservados </p>
+            <span id="postea"> <p>2020 © VeganBook.com Todos los derechos reservados </p></span>
            
           
         
       
           </footer>
+          <script src="js/cambio.js"></script>
           <script src="js/jquery-3.4.1.min.js"></script>
           <script src="js/jquery.bxslider.min.js"></script>
           <script src="js/body.js"></script>

@@ -9,14 +9,16 @@
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
        
-   
+        <link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <link rel="stylesheet" href="css/jquery.bxslider.css">
-   
+    <script src="js/bienvenida.js" language="JavaScript" type="text/javascript">
+     
+    </script>    
     
     </head>
     <body id="body">
@@ -78,42 +80,25 @@
 </nav>
       
 <section id="contenido">
-
-  <article class ="posteo">
+  <article class="contenedor">        
     <div class="row">
-  
-    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-      <form  action="home" >
-       <h1 style="color:deepskyblue"> {{$users->name}}</h1>
-      <img src="{{ $users->url_path}}" width="100px" alt="100px">
-      <textarea class="textarea" name="textarea" value="" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
-     
-      <button type="submit">enviar</button>
-      <button type="reset">borrar</button>
-    </form>
-    
-    
-    </div>
-  
-    </div>
- 
-    </article>
-   
- <article class ="re-posteos">
-  <div class="row">   
-    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-          
+      <div class="col-lg-12 col-md-12 col-sm-8 col-xs-12">       
+    <div id ="carrusel" >
+      <div> <img src="css/images/01.jpg"  alt=""></div>
+      <div> <img src="css/images/10.jfif"  alt=""></div>
+      <div> <img src="css/images/03.jpg"  alt=""></div>
+      <div> <img src="css/images/09.jfif"  alt=""></div>
+     <div> <img src="css/images/08.jfif"  alt=""></div>
+     <div>  <img src="css/images/11.jfif"  alt=""></div> 
 
     </div>
-    </div>
+    
+
+
+   
+
 
 </article>
-  
-
-
-
-
-
 
 
     <article class ="articulo">
@@ -149,6 +134,7 @@
               
               @endforeach
             </table>
+            {{$articulos->links()}}
             </div>
           
           </div>
@@ -159,72 +145,53 @@
       
   
       </article>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <article>
-          
-              
-                <div id ="carrusel" >
-                  <div> <img src="css/images/01.jpg"  alt=""></div>
-                  <div> <img src="css/images/10.jfif"  alt=""></div>
-                  <div> <img src="css/images/03.jpg"  alt=""></div>
-                  <div> <img src="css/images/09.jfif"  alt=""></div>
-                 <div> <img src="css/images/08.jfif"  alt=""></div>
-                 <div>  <img src="css/images/11.jfif"  alt=""></div> 
- 
-                </div>
-                
-
-          
-               
-           
-         
-      </article>
-    
-
-
-      
-
-
-
       </section>
+
+      {{-- noticia y propagandas --}}
       <aside >
         <div class="propaganda">
 
+          <h3>Veganbook</h3>
+          <p>es una pagina creada para los usuarios veganos</p> 
+          donde pueden publicar sus articulos 
+          <p>interactuar con otro usuarios </p>
+          <p>intercambiar recetas veganas</p>
+          <p>hacer medicamentos caseros con hierbas medicinales</p>
 
+        </div>  
 
+        <div class="propaganda-1">
+        
+         
+
+                </div>      
+              <div class ="noticias">
+                <a id=""href="posts" class="btn btn-primary btn-lg " role="button" aria-disabled="true"><span id="postea">Oprime y Postea</span></a>
+
+            {{-- <a href="posts"><h5>pincha y postea con nosotros</h5></a>  --}}
+            <img src="css/images/postea.png" alt="">
+
+              </div>
+            
+            <div class ="noticias2">
+          
+          <img src="css/images/siguenos-1.jfif" alt="">
+          <div class="texto-encima"></div>
+          <div class="centrado"><h3 style="color:white">VeganBook</h3></div>
+          <p style="color:white">en Veganbook somos una comunidad abierta a la sociedad
+          que estamos para brindarte nuestras herramientas gratuitamente sin costo alguno</p>
+            </div>
+            <div class ="noticias-2">
+              <img src="css/images/veganos.jfif" alt="">
+          
+                </div>
 
           
-        </div>
-      <div class ="noticias">
-     <br>
-     
-      </div>
+              
 
-  
 
-      </aside>
-   
+              </aside>
+          
   
 
         <footer class="footer"> 
@@ -253,6 +220,12 @@
       
     
         </footer>
+
+
+
+        
+                    
+        <script src="js/cambio.js"></script>     
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/jquery.bxslider.min.js"></script>
         <script src="js/body.js"></script>
@@ -262,19 +235,16 @@
              auto:true,
              pause:1750,
             });
-          });
-         
-
-
+          });       
    // busca algo cuando el usuario le de click a eso ejecuta la funcion
-     $('.muestra').on('click',function(){
-              console.log("ok");
+     $('.footer').on('click',function(){
+              console.log();
          });
-
-
         </script>
-        
+             
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       
+                             
     </body>
    
 

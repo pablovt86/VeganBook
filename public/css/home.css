@@ -8,7 +8,7 @@
 
 body
 {
-  font-family: sans-serif;
+  font-family: 'Tangerine', cursive;
  background-color: slategrey;
 }
 
@@ -29,7 +29,7 @@ body
 }
 
 .menu{
-  background-color: #fff;
+  background-image: linear-gradient(to right, #99ffeb,#ffc107);
   height: 150px;
   justify-content: center;
 }
@@ -46,7 +46,7 @@ body
 #contenido{
  
   width: 700px;
-  height: 1480px;
+  height: 1080px;
   float: left;
   margin-top: 10px;
   margin-right: 10px;
@@ -54,25 +54,7 @@ body
   text-align: center;
   border:0.5px solid #000000;
 }
-.posteo{
-  height: 360px;
-  width: 700px;
-  background-image: url("images/agua.jpg");
-  background-size: cover;
 
-}
-.posteo h1{
-  position:absolute;
-  font-size: 28px;
-  left: 108px;
-  top: 70px;
-}
-.posteo img{
-  position: absolute;
-  left: 20px;
-  top: 2px;
-  border-radius: 50%;
-}
 
 
 .articulo{
@@ -83,56 +65,79 @@ body
 
 }
 
-.re-posteos{
-
-  height: 360px;
-  width: 700px;
-  background-size: cover;
 
 
 
-}
+
 
 
 
 /*  */
 aside{
+position: relative;
 width: 470px;
 height: 1080px;
 margin-top: 10px;
 float: right;
 overflow: hidden;
 border:0.5px solid #000000;
+
+text-align: center;
 }
 
  .noticias{
+  background-color: darkgreen;
   text-align: center;
   width: 278px;
-  height: 1080px;
-  border:0.5px solid grey;
+  height: 350px;
+  
+ float: right;
+
+ }
+
+ .noticias2{
+  background-color: darkgreen;
+  text-align: center;
+  width: 278px;
+  height: 350px;
  float: right;
 
 }
 
+ .noticias-2{
+  background-color: darkgreen; 
+  text-align: center;
+  width: 278px;
+  height: 350px;
+ float: right;
+ }
 
-.comentario{
-  position: absolute;
-  top: 105px;
-  left:40px;
-  
+
+
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
-
-
-
+.centrado{
+    position: absolute;
+    top: 51.3%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
 
 
 .propaganda{
   text-align: center;
   width: 190px;
-  height: 1030px;
-  border:0.5px solid grey;
+  height: 1051px;
   float: left;
+  background-color: gainsboro;
 }
+
+
+
+
 
 
 /* nabvar */
@@ -204,16 +209,12 @@ border:0.5px solid #000000;
 
 } */
 
-
-
-
-
 /*----------------------Footer section--------------------*/
 
 .footer
 {
 
-  background-color: chartreuse;
+  background-image: linear-gradient(to right, #99ffeb,#ffc107);
   clear: both;
   text-align: center;
   padding:20px;
