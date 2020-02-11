@@ -1,13 +1,10 @@
-@extends('layouts.admin')
-@section('content')
+@extends('layouts.header')
+@section('title')
+@section('header')
+
+
 <div class="row">
-  <div class="col-lg-8 col-md-8 col-xs-12">
-    <h3>listado de Articulos<a href="articulo/create"><button class="btn btn-success">Nuevo</button></a></h3>
- @include('almacen.articulo.search')
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
     <div class="table-resposive">
       <table class="table table-striped table-bordered table-condensed table-hover">
         <thead>
@@ -46,5 +43,5 @@
     </div>
   </div>
 
-</div>
+</div> 
 @endsection

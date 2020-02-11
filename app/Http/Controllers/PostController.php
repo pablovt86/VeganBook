@@ -10,8 +10,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
         $users = Auth::User();
+        $posts = $users->posts()->get();
+        
         return view('posts/index',['posts'=>$posts ,'users'=>$users]);
     }
 
@@ -19,7 +20,7 @@ class PostController extends Controller
 
         $reglas=[
             'textarea' =>"min:3|max:512",
-              'title'=>"min:3|max:256",
+            //   'title'=>"min:3|max:256",
         ];
 
 
@@ -37,8 +38,8 @@ class PostController extends Controller
         $this->validate($request,$reglas,$mensaje);
            $post=new Post;
            $post->textarea=$request->get('textarea');
-           $post->title=$request->get('title');
-        //   $post->user_id = Auth::user()->id;
+       
+            $post->user_id = Auth::user()->id;
            $post->save();
        return redirect('posts');
 

@@ -9,7 +9,7 @@
 body
 {
   font-family: 'Tangerine', cursive;
- background-color: slategrey;
+
 }
 
 #contenedor{
@@ -29,7 +29,7 @@ body
 }
 
 .menu{
-  background-image: linear-gradient(to right, #99ffeb,#ffc107);
+  background-image: linear-gradient(to right, #b6e0d2,#195539);
   height: 150px;
   justify-content: center;
 }
@@ -46,13 +46,13 @@ body
 #contenido{
  
   width: 700px;
-  height: 1080px;
+  height: 1053px;
   float: left;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
   text-align: center;
-  border:0.5px solid #000000;
+  background-color: floralwhite;
 }
 
 
@@ -66,27 +66,20 @@ body
 }
 
 
-
-
-
-
-
-
 /*  */
 aside{
 position: relative;
 width: 470px;
-height: 1080px;
+height: 1053px;
 margin-top: 10px;
 float: right;
 overflow: hidden;
-border:0.5px solid #000000;
 
 text-align: center;
 }
 
  .noticias{
-  background-color: darkgreen;
+  background-color:  #041b17;
   text-align: center;
   width: 278px;
   height: 350px;
@@ -96,7 +89,7 @@ text-align: center;
  }
 
  .noticias2{
-  background-color: darkgreen;
+  background-color: #041b17;
   text-align: center;
   width: 278px;
   height: 350px;
@@ -105,7 +98,7 @@ text-align: center;
 }
 
  .noticias-2{
-  background-color: darkgreen; 
+  background-color: #041b17; 
   text-align: center;
   width: 278px;
   height: 350px;
@@ -121,7 +114,7 @@ text-align: center;
 }
 .centrado{
     position: absolute;
-    top: 51.3%;
+    top: 52.1%;
     left: 70%;
     transform: translate(-50%, -50%);
 }
@@ -151,7 +144,7 @@ text-align: center;
 
 .navbar
 {
-  background-image: linear-gradient(to right, #99ffeb,#ffc107);
+  background-image: linear-gradient(to right, #b6e0d2,#195539);
   padding: 0!important;
   width: 100%;
   height: 85px;
@@ -213,12 +206,11 @@ text-align: center;
 
 .footer
 {
-
-  background-image: linear-gradient(to right, #99ffeb,#ffc107);
+  background-image: linear-gradient(to right, #b6e0d2,#195539);
   clear: both;
   text-align: center;
   padding:20px;
-  border:0.5px solid #000000;
+ 
   
 }
 

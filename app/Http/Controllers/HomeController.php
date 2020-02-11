@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Articulo;
 use App\Categoria;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -28,10 +29,10 @@ class HomeController extends Controller
         $users = Auth::User();
       
         $articulos = Articulo::paginate(5);
-        
+        $posts  =$users->posts();
         $categorias = Categoria::paginate(3);
         return view('home',[
-          "users"=>$users ,'articulos'=> $articulos,'categorias'=>$categorias
+          "users"=>$users ,'articulos'=> $articulos,'categorias'=>$categorias,'posts'=>$posts
         ]);
        
        

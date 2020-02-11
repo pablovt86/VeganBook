@@ -10,6 +10,8 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
+
+/* aca podemos manipular el */
 .bx-wrapper img {
   width: 690px;
   height: 360px;

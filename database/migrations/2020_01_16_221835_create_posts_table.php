@@ -19,7 +19,6 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();           //creo la relacion foranea de la id usuarios
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('textarea');
-            $table->text('title');
             $table->timestamps();
           });
         }

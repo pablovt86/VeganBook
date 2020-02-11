@@ -17,6 +17,7 @@ class ArticuloController extends Controller
   public function index(Request $request){
     if($request)
     {
+      //trim podemos eliminar espacios en blanco u otros caracteres al inicio y final de una cadena de texto
       $query=trim($request->get('searchText'));
       $articulos=DB::table('articulo as art')
        ->join('categoria as cat','art.idcategoria','=','cat.idcategoria')

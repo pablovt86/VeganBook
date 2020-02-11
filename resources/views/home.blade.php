@@ -16,12 +16,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <link rel="stylesheet" href="css/jquery.bxslider.css">
-    <script src="js/bienvenida.js" language="JavaScript" type="text/javascript">
+    {{-- <script src="js/bienvenida.js" language="JavaScript" type="text/javascript">
+  
      
-    </script>    
+    </script>     --}}
     
     </head>
     <body id="body">
+    
       <div id="contenedor">    
       <header  id="main-header">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -57,6 +59,8 @@
             <option value="red">rojo</option>
             <option value="blue">azul</option>
             <option value="green">green</option>
+            <option value="black">negro</option>
+
             </select>
 
         </div>
@@ -83,7 +87,17 @@
   <article class="contenedor">        
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-8 col-xs-12">       
-    <div id ="carrusel" >
+     
+        @forelse ($posts as $post)
+        {{$post->textarea}}
+        @empty
+        no se encuentra tu posteo
+        @endforelse
+
+
+
+
+    {{-- <div id ="carrusel" >
       <div> <img src="css/images/01.jpg"  alt=""></div>
       <div> <img src="css/images/10.jfif"  alt=""></div>
       <div> <img src="css/images/03.jpg"  alt=""></div>
@@ -92,7 +106,7 @@
      <div>  <img src="css/images/11.jfif"  alt=""></div> 
 
     </div>
-    
+     --}}
 
 
    
@@ -111,7 +125,6 @@
                
                 <th>Nombre</th>
               
-                
                 <th>Stock</th>
                 <th>Imagen</th>
                 <th>Opciones</th>
@@ -121,11 +134,10 @@
                 <tr>
                 <td>{{$art->nombre}}</td>
            
-                
                 <td>{{$art->stock}}</td>
       
                 <td>
-                    <img src="{{asset('/imagenes/articulos/'.$art->imagen)}}" alt="{{$art->nombre}}" height="50px" width="50px" class="img-thumbnail">
+                    <img src="{{asset('/imagenes/articulos/'.$art->imagen)}}" alt="{{$art->nombre}}" height="100px" width="100px" class="img-thumbnail">
                 </td>
                   <td>{{$art->estado}}</td>
                 <td>
@@ -157,16 +169,37 @@
           <p>interactuar con otro usuarios </p>
           <p>intercambiar recetas veganas</p>
           <p>hacer medicamentos caseros con hierbas medicinales</p>
+           ---------------------------
+           <h5>Articulos</h5>
+           -----------------------------
+           <p>
+             <<----a tu izquierda mira los artiticulos activos</p>
+           -----------------------------
+           <h5>Redes</h5>
+           ------------------------------
+             <p>  a tu derecha RedesSociales--></p>
+           ----------------------------
+           <h5>Saludos</h5> 
+           ------------------------------  
+           {{-- <p>Gracias y saludo
+             a todos nuestros usuarios por postear 
+             y publicar tus articulos
+             gracias por confiar en nosotros 
+             este equipo de programadores
+             trabaja dia a dia para mojorar la 
+             calidad de nuestra pagina haciendola 
+             cada vez mas dinamica para la calidad 
+             nuestro usuarios. gracias lo saluda
+             VeganBook.... 
+           </p> --}}
+
+
 
         </div>  
 
-        <div class="propaganda-1">
-        
-         
-
-                </div>      
+           
               <div class ="noticias">
-                <a id=""href="posts" class="btn btn-primary btn-lg " role="button" aria-disabled="true"><span id="postea">Oprime y Postea</span></a>
+                <a id=""href="posts" class="btn btn-dark btn-lg " role="button" aria-disabled="true"><span id="postea">Oprime y Postea</span></a>
 
             {{-- <a href="posts"><h5>pincha y postea con nosotros</h5></a>  --}}
             <img src="css/images/postea.png" alt="">
@@ -185,7 +218,7 @@
               <img src="css/images/veganos.jfif" alt="">
           
                 </div>
-
+                
           
               
 
@@ -195,10 +228,7 @@
   
 
         <footer class="footer"> 
-          <div>
-           
-            </div>
-            
+                   
             <p>Encuentranos en las redes</p>
             <a class="btn btn-outline-dark btn-social mx-1" href="https://www.facebook.com/delfina.book.1">
               <i class="fa fa-facebook"></i>
@@ -212,13 +242,7 @@
             <a class="btn btn-outline-dark btn-social mx-1" href="#">
               <i class="fa fa-instagram"></i>
             </a>
-          
-
-            <p>2020 © VeganBook.com Todos los derechos reservados </p>
-         
-        
-      
-    
+              <p>2020 © VeganBook.com Todos los derechos reservados </p>                           
         </footer>
 
 

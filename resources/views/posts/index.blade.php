@@ -16,8 +16,22 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script>
    
+      function loadLog() {
+var post= document.getElementById('textarea').value;
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (xhttp.readyState == 4 && xhttp.status == 200) {
+document.getElementById("posteo").innerHTML = xhttp.responseText;
+}
+};
+xhttp.open("POST", "index.blade.php", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("textarea="+post);
+}
     
+    </script>
     </head>
     <body id="body">
       <div id="contenedor">    
@@ -27,16 +41,23 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
+        
+        <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+          <option value="red">rojo</option>
+          <option value="blue">azul</option>
+          <option value="green">green</option>
+          </select>
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="almacen/articulo">sube tu articulo</a>
+            
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="almacen/categoria">sube la categoria</a>
+           
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ventas/cliente">nuestro clientes</a>
+             
             </li>
 
             <li class="nav-item dropdown">
@@ -44,74 +65,53 @@
           nuestro product
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="nav-link" href="almacen/articulo"><p style="color:black"> sube tu articulo </p></a>
+          <a class="nav-link" href="almacen/categoria"><p style="color:black" >sube la categoria </p></a>
+          <a class="nav-link" href="ventas/cliente"><p style="color:black" > nuestro clientes </p></a>
           <a class="dropdown-item" href="#">Link 3</a>
         </div>
       </li>
         
           </ul>
-          <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
-            <option value="red">rojo</option>
-            <option value="blue">azul</option>
-            <option value="green">green</option>
-            </select>
+          <div class="flex-center position-ref height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}"><h5>Home</h5></a>
+                    @else
+                        <a href="{{ route('login') }}"></a>
 
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}"></a>
+                        @endif
+                    @endauth
+                </div>
+            @endif 
+        </div>
         </div>
       </nav>
-      
-
-
-
-
-
     </header>
 <nav class="menu">
-
 <div class="logo ">
   <img src="imagenes/logo.png"  width="500px" alt="" >
-
-
-
 </div>
-
 </nav>
-                        {{-- <article class ="posteo">
-                           
-                            <div class="row">
-                           
-                            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-                                
-                            <form  method="POST" action="" >
-                                @csrf
-                              
-                               
-                            <h1>{{$users->name}}</h1>
-                                <input type="text" name="title">title de tu post
-                              <textarea class="textarea" name="textarea" value="textarea" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
-                             
-                              <button  type="submit" value="submit">enviar</button>
-                              <button type="reset" value="reset">borrar</button>
-                            </form>
-                       
-                            </div>
-                             --}}
+                      
                             
                             <section id="contenido">
 
-                                <article class ="posteo">
+                                <article id="posteo" class ="posteo">
                                   <div class="row">
                                 
                                   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                     <form  method="POST" action="" >
                                         @csrf  
-
-                                     <h1  style="color:deepskyblue"> {{$users->name}}</h1>
-                                    <img src="{{ $users->url_path}}" width="100px" alt="100px">
-                                    <textarea class="textarea" name="textarea" value="" rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
+                                     <h1 style="color:deepskyblue"> {{$users->name}}</h1>                                     
+                                    <img src="{{ $users->url_path}}" width="70px" alt="70px">
+                                    <textarea id="textarea" name="textarea"  rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
                                     
-                                    <button type="submit">enviar</button>
-                                    <button type="reset">borrar</button>
+                                    <button type="submit" onclick="loadlog()">enviar</button>
+                                    
                                   </form>
                                   
                                   
@@ -123,72 +123,39 @@
                                  
                                <article class ="re-posteos">
                                 <div class="row">   
-                                  <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                                  <div class="col-12">
                                         
                                     @foreach ($posts as $post)
-                                    {{$post->textarea}}
-                                    {{$post->title}}
+                                  
+                                <div class="textarea">
+                                
+                                  <p> {{$post->textarea}}</p>
+                                
+                                  </div>
                                 @endforeach
-      
                                   </div>
                                   </div>
                               
-                              </article>
-                                
-
-
-
-                            </article>
-
-   
-   
-
-
-
-
-
-                   <article>
-          
-              
-                    <div id ="carrusel" >
-                      <div> <img src="css/images/01.jpg"  alt=""></div>
-                      <div> <img src="css/images/10.jfif"  alt=""></div>
-                      <div> <img src="css/images/03.jpg"  alt=""></div>
-                      <div> <img src="css/images/09.jfif"  alt=""></div>
-                     <div> <img src="css/images/08.jfif"  alt=""></div>
-                     <div>  <img src="css/images/11.jfif"  alt=""></div> 
-     
-                    </div>
-                    
-    
-              
+                              </article>                                                                              
                    
-               
-             
-          </article>
-        
+                 </section>        
+        <aside >         
+        <div class ="noticias">                        
+            <div id ="carrusel" >
+              <div> <img src="css/images/pannacotta.jfif"  alt=""></div>
+              <div> <img src="css/images/light.jfif"  alt=""></div>
+              <div> <img src="css/images/matambre-seitan.jpg"  alt=""></div>
+              <div> <img src="css/images/bife-de-seitan.jpg"  alt=""></div>
+             <div> <img src="css/images/carrot-cake.jpg"  alt=""></div>
+             <div>  <img src="css/images/hamb-lent.jpg"  alt=""></div> 
 
-
-        </section>
-        <aside >
-          <div class="propaganda">
-  
-  
-  
-  
-            
-          </div>
-        <div class ="noticias">
-       <br>
-       
-        </div>
-  
-    
-  
+            </div>
+      
+        </div> 
         </aside>
      
     
-  
+ 
           <footer class="footer"> 
             <div>
              
@@ -259,9 +226,4 @@
                   
                         
                             
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+          

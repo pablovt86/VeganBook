@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::resource('/posts', 'PostController');
 
-Route::post('posts', 'PostController@store')->name('posts.index');
-Route::get('/', function () {
+// Route::post('posts', 'PostController@store')->name('posts.index');
+Route::get('/inicio', function () {
     return view('welcome');
 });
 Route::get('/noticias', function () {

@@ -8,7 +8,7 @@ class Post extends Model
 {
     
    protected $fillable = [
-      'textarea', 'title','user_id' 
+      'textarea', 'user_id' 
  ];
 
 protected $guarded=[];
