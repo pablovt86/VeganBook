@@ -54,7 +54,7 @@
                 </div>
             @endif --}}
 
-            <div class="content">
+            <div class="content" >
               <section id="nav-bar">
 
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -84,7 +84,7 @@
           @yield('content')
           <footer class="footer">
 
-<div>
+<div class="pt-5">
   <div class="encuentra">
   Encuentranos en las redes
   </div>
