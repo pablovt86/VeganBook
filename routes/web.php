@@ -14,7 +14,7 @@
 Route::resource('/posts', 'PostController');
 
 // Route::post('posts', 'PostController@store')->name('posts.index');
-Route::get('/inicio', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/noticias', function () {

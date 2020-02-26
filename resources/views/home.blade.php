@@ -22,71 +22,114 @@
     </script>     --}}
     
     </head>
-    <body id="body">
+    <body id="body" >
     
       <div id="contenedor">    
       <header  id="main-header">
+        <div class="row">
+          <div class="col-12"> 
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="{{ route('home') }}"><img src="/imagenes/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left Side Of Navbar -->
+          
+
+          <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="almacen/articulo">sube tu articulo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="almacen/categoria">sube la categoria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ventas/cliente">nuestro clientes</a>
-            </li>
+              <!-- Authentication Links -->
+              @guest
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  </li>
+                  @if (Route::has('register'))
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                      </li>
+                  @endif
+              @else
+                  <li class="nav-item dropdown">
+                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                          {{ Auth::user()->name }} <span class="caret"></span>
+                      </a>
 
-            <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          nuestro product
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
-        </div>
-      </li>
+
+                      
+                     
+
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                              {{ __('Logout') }}
+                          </a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              @csrf
+                          </form>
+                      </div>
+                  </li>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="almacen/articulo">sube tu articulo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="almacen/categoria">sube la categoria</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="ventas/cliente">nuestro clientes</a>
+                    </li>
         
+             
+                
+                  </ul>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+       
+                    <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+                      <option value="red">rojo</option>
+                      <option value="blue">azul</option>
+                      <option value="green">green</option>
+                      <option value="black">negro</option>
+          
+                      </select>
+          
+                  </div>
+              @endguest
           </ul>
-          <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
-            <option value="red">rojo</option>
-            <option value="blue">azul</option>
-            <option value="green">green</option>
-            <option value="black">negro</option>
+      </div>
+  </div>
 
-            </select>
 
-        </div>
+
+      
       </nav>
       
 
 
 
-
-
+    </div>
+    </div>
     </header>
 <nav class="menu">
-
+<div class="row">
+<div class="col-12">
 <div class="logo ">
   <img src="imagenes/logo.png"  width="500px" alt="" >
 
 
 
 </div>
-
+</div>
+</div>
 </nav>
       
 <section id="contenido">
   <article class="contenedor">        
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-8 col-xs-12">       
+      <div class="col-12">       
      
         @forelse ($posts as $post)
         {{$post->textarea}}
@@ -118,7 +161,7 @@
     <article class ="articulo">
 
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-12">
           <div class="table-resposive">
             <table class="table table-striped table-bordered table-condensed table-hover">
               <thead>
@@ -162,7 +205,8 @@
       {{-- noticia y propagandas --}}
       <aside >
         <div class="propaganda">
-
+          <div class="row">
+            <div class="col-12">
           <h3>Veganbook</h3>
           <p>es una pagina creada para los usuarios veganos</p> 
           donde pueden publicar sus articulos 
@@ -198,26 +242,7 @@
         </div>  
 
            
-              <div class ="noticias">
-                <a id=""href="posts" class="btn btn-dark btn-lg " role="button" aria-disabled="true"><span id="postea">Oprime y Postea</span></a>
-
-            {{-- <a href="posts"><h5>pincha y postea con nosotros</h5></a>  --}}
-            <img src="css/images/postea.png" alt="">
-
-              </div>
-            
-            <div class ="noticias2">
-          
-          <img src="css/images/siguenos-1.jfif" alt="">
-          <div class="texto-encima"></div>
-          <div class="centrado"><h3 style="color:white">VeganBook</h3></div>
-          <p style="color:white">en Veganbook somos una comunidad abierta a la sociedad
-          que estamos para brindarte nuestras herramientas gratuitamente sin costo alguno</p>
-            </div>
-            <div class ="noticias-2">
-              <img src="css/images/veganos.jfif" alt="">
-          
-                </div>
+             
                 
           
               

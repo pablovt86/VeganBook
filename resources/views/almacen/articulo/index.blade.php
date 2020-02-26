@@ -1,8 +1,11 @@
-@extends('layouts.header')
-@section('title')
-@section('header')
-
-
+@extends('layouts.admin')
+@section('content')
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-xs-12">
+    <h3>listado de articulo<a href="articulo/create"><button class="btn btn-success">nuevo</button></a></h3>
+ @include('almacen.articulo.search')
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
     <div class="table-resposive">

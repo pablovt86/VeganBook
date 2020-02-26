@@ -2,7 +2,6 @@
 body
 {
   font-family: sans-serif;
-  background-image: linear-gradient(to right, rgb(241, 223, 223),#202020);
 
 }
 
@@ -17,14 +16,13 @@ body
 }
 
 .header{
-
- 
   height: 85px;
 }
 
 .menu{
-  background-image: linear-gradient(to right, rgb(241, 223, 223),#686765);
-    height: 150px;
+  background-image: linear-gradient(to right, rgb(212, 240, 223),rgb(73, 139, 117));
+
+  height: 150px;
   justify-content: center;
 }
 
@@ -33,7 +31,7 @@ form{
 }
 form button{
     position: relative;
-    float: right;
+   
      margin-bottom:80px;
 }
 
@@ -62,11 +60,39 @@ form button{
   
   width: auto;
   height:auto ;
-  border-radius: 20%;
+  border-radius: 10%;
   background-image: url("images/fondo.jfif"); 
   display: inline-block;
-  border-radius: 50%;
+  padding: 10px 10px;
+  margin-bottom: 10px;
 }
+button.btn.btn-danger{
+  padding: 3px;
+  border-radius: 80%;
+  
+
+}
+button.btn.btn-info{
+  padding: 3px;
+  border-radius: 80%;
+}
+
+
+.borrar{
+  border-radius: 80%;
+  margin-top: 150px;
+  
+ 
+}
+.edit{
+
+  padding: 15px;
+  border-radius: 80%;
+  margin-top: 135px;
+  text-align: center;
+}
+
+
 
   .posteo{
     height: 360px;
@@ -95,14 +121,17 @@ form button{
     background-image: url("images/fondo-2.jfif");
     background-size: cover;
     text-align: center;
-    height: 720px;
+    height: 360px;
     width: 890px;
     overflow: hidden;
    
   }
+
+
+
  
  #fondo{
-  background-image: linear-gradient(to right, rgb(216, 193, 193),#686765);
+  background-image: linear-gradient(to right, rgb(10, 241, 68),#a1a129);
   border-radius: 50%;
  }
 
@@ -111,22 +140,22 @@ form button{
   /*  */
   aside{
   width: 276px;
-  height: 1080px;
+  height: 720px;
   margin-top: 10px;
   float: right;
   overflow: hidden;
   border:0.5px solid #000000;
   }
   
-   .noticias{
+   /* .noticias{
     text-align: center;
     width: 276px;
-    height: 1080px;
+    height: 720px;
     border:0.5px solid grey;
    float: right;
   
   }
-  
+   */
   
   .comentario{
     position: absolute;
@@ -147,7 +176,7 @@ form button{
 
 .navbar
 {
-  background-image: linear-gradient(to right, rgb(216, 193, 193),#686765);
+  background-image: linear-gradient(to right, rgb(212, 240, 223),rgb(73, 139, 117));
   padding: 0!important;
   width: 100%;
   height: 85px;

@@ -12,17 +12,18 @@
 
                         <article id="posteo" class ="posteo">
                             <div class="row">
+                          
                               
                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                             <form action="">   
-                                @csrf                                
+                                {{Form::model($posts, ['route' => ['posts.update', $posts->id],'method'=>'patch'])}}
+                                  @csrf  
                                  {{$posts->textarea}}
                               <textarea id="textarea" name="textarea"  rows="10" cols="60" placeholder="Cuentanos como es tu dia hoy!!"></textarea>
                               
                               <button type="submit" onclick="loadlog()">enviar</button>
                               
-                          
-                            </form>                              
+                              {{ Form::close() }}                            
+                            
                             </div>
                           
                             </div>
