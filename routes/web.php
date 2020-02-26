@@ -17,9 +17,6 @@ Route::resource('/posts', 'PostController');
 Route::get('/inicio', function () {
     return view('welcome');
 });
-Route::get('/noticias', function () {
-    return view('noticias');
-});
 
 //utilizo el metodo de resource por q laravel entiende q con este metodo agrupa 
 // index , show ,edit, update, destroy.!!  
