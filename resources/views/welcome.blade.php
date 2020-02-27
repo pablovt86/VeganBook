@@ -12,20 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  
-
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-<style>
-#carrusel{
-
-  width:120px;
-  margin: 0 auto;
-}
-</style>
-
-    </head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    
+  </head>
     <body>
         
 
@@ -40,10 +29,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">Login</a>
+                  <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">Register</a>
+                  <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/aboutUs">Acerca de Veganbook</a>
