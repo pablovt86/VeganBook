@@ -46,27 +46,8 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
-                  <span class="hidden-xs">VegamBook</span>
+                  <span class="hidden-xs">Veganbook</span>
                 </a>
-                <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-
-                    <p>
-                      mr.robot- Desarrollando Software
-                      <small>www.youtube.com/mr.robot</small>
-                    </p>
-                  </li>
-
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-
-                    <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
-                    </div>
-                  </li>
-                </ul>
               </li>
 
             </ul>

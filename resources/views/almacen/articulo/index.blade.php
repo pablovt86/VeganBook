@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
   <div class="col-lg-8 col-md-8 col-xs-12">
-    <h3>listado de articulo<a href="articulo/create"><button class="btn btn-success">nuevo</button></a></h3>
+    <h3>Lista de articulos<a href="articulo/create"><button style="margin-left:10px" class="btn btn-success ">Nuevo</button></a></h3>
  @include('almacen.articulo.search')
   </div>
 </div>
@@ -33,8 +33,8 @@
           </td>
             <td>{{$art->estado}}</td>
           <td>
-          <a href="{{URL::action('ArticuloController@edit',$art->idarticulo)}}">  <button class="btn btn-info"> editar</button></a>
-            <a href=""data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger">eliminar categoria</button></a>
+          <a href="{{URL::action('ArticuloController@edit',$art->idarticulo)}}">  <button class="btn btn-info">Editar</button></a>
+            <a href=""data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger">Eliminar categoria</button></a>
           </td>
 
           </tr>
