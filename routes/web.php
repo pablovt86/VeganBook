@@ -15,8 +15,9 @@ Route::resource('/posts', 'PostController');
 
 // Route::post('posts', 'PostController@store')->name('posts.index');
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
+
 
 //utilizo el metodo de resource por q laravel entiende q con este metodo agrupa 
 // index , show ,edit, update, destroy.!!  
@@ -24,14 +25,20 @@ Route::get('/', function () {
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/articulo','ArticuloController');
 Route::resource('ventas/cliente','ClienteController');
+Route::resource('almacen/compras/proveedor', 'ProveedoresController');
+Route::resource('almacen/compras/ingreso', 'IngresoController');
+Route::resource('ventas/venta','VentaController');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+ 
+Route::post('/home', 'HomeController@index')->name('home');
+
 Route::get('/aboutUs', function ()
 {
     return view('aboutus');
 });
+
 Route::get('/faqs', function ()
 {
     return view('faqs');

@@ -22,7 +22,7 @@
           <td>{{$cat->nombre}}</td>
           <td>{{$cat->descripcion}}</td>
           <td>
-          <a href="{{URL::action('CategoriaController@edit',$cat->idcategoria)}}">  <button class="btn btn-info"> editar</buttom></a>
+          <a href="{{URL::action('CategoriaController@edit',$cat->idcategoria)}}">  <button class="btn btn-info"> editar</button></a>
             <a href=""data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button class="btn btn-danger">eliminar categoria</button></a>
           </td>
 

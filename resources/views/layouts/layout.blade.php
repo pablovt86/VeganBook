@@ -39,7 +39,7 @@
 
     </head>
     <body>
-        {{-- <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -52,12 +52,12 @@
                         @endif
                     @endauth
                 </div>
-            @endif --}}
+            @endif
 
             <div class="content" >
               <section id="nav-bar">
 
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="{{ route('home') }}"><img src="/imagenes/logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <i class="fa fa-bars"></i>

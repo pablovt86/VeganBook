@@ -28,7 +28,7 @@
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
     <div class="form-group">
       <label for="nombre">direccion</label>
-      <input type="text" name="direccion" value="{{old('direccion')}}" class="form-control" placeholder="direccion..">
+      <input type="text" name="dirreccion" value="{{old('direccion')}}" class="form-control" placeholder="direccion..">
     </div>
   </div>
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
@@ -45,7 +45,7 @@
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
   <div class="form-group">
     <label for="num_documento">Numero documento</label>
-    <input class="form-control" name="num_documento" value"{{old('num_documento')}}" placeholder="num_documento...">
+    <input class="form-control" name="num_documento" value="{{old('num_documento')}}" placeholder="num_documento...">
   </div>
 </div>
 

@@ -40,12 +40,7 @@ class PostController extends Controller
            $post->textarea=$request->get('textarea');
             $post->user_id = Auth::user()->id;
            $post->save();
-       return redirect('posts');
-
-
-
-
-       
+         return redirect('posts');    
 
  }
   

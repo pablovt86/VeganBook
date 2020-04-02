@@ -1,15 +1,16 @@
 <div class="modal fade modal-slide-in-rigth" aria-hidden="true"
-role="dialog" tabindex="-1" id="modal-delete-{{$art->idarticulo}}">
-{{form::Open(array('action' =>array('ArticuloController@destroy',$art->idarticulo),'method'=>'delete'))}} <div class="modal-dialog">
+role="dialog" tabindex="-1" id="modal-delete-{{$ing->idpersona}}">
+{{form::Open(array('action' =>array('ProveedoresController@destroy',$ing->idpersona),'method'=>'delete'))}}
+<div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">x</span>
     </button>
-    <h4 class="modal-title">Eliminar Articulo</h4>
+    <h4 class="modal-title">Eliminar Proveedor</h4>
     </div>
     <div class="modal-body">
-      <p>confirme si desea eliminar el Articulo</p>
+      <p>confirme si desea eliminar el Proveedor</p>
     </div>
     <div class="modal-footer">
       <button type="button"class="btn btn_default" data-dismiss="modal">Cerrar</button>

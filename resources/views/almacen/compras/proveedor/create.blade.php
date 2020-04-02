@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<h3>Editar Cliente{{$persona->nombre}}</h3>
+<h3>Nuevas Proveedores</h3>
 @if (count($errors)>0)
 <div class="alert alert-danger">
   <ul>
@@ -16,38 +16,28 @@
 @endif
 </div>
 </div>
-{{Form::model($persona,['method'=>'PATCH','route'=>['cliente.update',$persona->idpersona]])}}
+{!!Form::open(array('url'=> '/almacen/compras/proveedor','method'=>'Post','autocomplete'=>'off'))!!}
 {{Form::token()}}
 <div class="row">
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
     <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" required  value="{{$persona->nombre}}" class="form-control" placeholder= "nombre..">
+      <input type="text" name="nombre" required  value="{{old('nombre')}}" class="form-control" placeholder= "nombre..">
     </div>
   </div>
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
     <div class="form-group">
       <label for="nombre">direccion</label>
-      <input type="text" name="direccion" value="{{$persona->direccion}}" class="form-control" placeholder="direccion..">
+      <input type="text" name="dirreccion" value="{{old('direccion')}}" class="form-control" placeholder="direccion..">
     </div>
   </div>
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
     <div class="form-group">
       <label for="nombre">Documento</label>
 <select class="form-control" name="tipo_documento">
-  @if ($persona->tipo_documento == 'DNI')
   <option value="Dni">DNI</option>
   <option value="RUC">RUC</option>
-  <option value="PASS">PAS</option>
-@elseif($persona->tipo_documento=='ruc')
-  <option value="Dni">DNI</option>
-  <option value="RUC" selected>RUC</option>
-  <option value="PASS">PAS</option>
-@else($persona->tipo_documento=='PASS')
-  <option value="Dni">DNI</option>
-  <option value="RUC">RUC</option>
-  <option value="PASS"selected>PAS</option>
-@endif
+  <option value="PASS">PASS</option>
 </select>
 </div>
   </div>
@@ -55,21 +45,21 @@
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
   <div class="form-group">
     <label for="num_documento">Numero documento</label>
-    <input class="form-control" name="num_documento" value="{{$persona->num_documento}}" placeholder="num_documento...">
+    <input class="form-control" name="num_documento" value="{{old('num_documento')}}" placeholder="num_documento...">
   </div>
 </div>
 
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
     <div class="form-group">
       <label for="telefono">Telefono</label>
-      <input type="text" name="telefono"  value="{{$persona->telefono}}" class="form-control" placeholder="telefono...">
+      <input type="text" name="telefono"  value="{{old('telefono')}}" class="form-control" placeholder="telefono...">
     </div>
   </div>
 
   <div class="col-lg-6 col-sm-6 col-md-6 col-sx-12">
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="text" name="email"  value="{{$persona->email}}" class="form-control" placeholder="email..">
+      <input type="text" name="email"  value="{{old('email')}}" class="form-control" placeholder="email..">
     </div>
   </div>
 
@@ -82,7 +72,7 @@
 </div>
 
 </div>
-{{Form::close()}}
+{!!Form::close()!!}
 
 
 

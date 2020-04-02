@@ -11,13 +11,15 @@ class ClienteController extends Controller
 {
   public function __construct(){
 
+    $this->middleware('auth');
+
   }
   public function index(Request $request){
     if($request){
       $query=trim($request->get('searchText'));
       $personas=DB::table('persona')
       ->where('nombre','LIKE','%'.$query.'%')
-      -> where('tipo_persona','=','Cliente')
+      ->where('tipo_persona','=','Cliente')
       ->orwhere('num_documento','LIKE','%'.$query.'%')
       -> where('tipo_persona','=','Cliente')
       ->orderBy('idpersona', 'desc')
@@ -42,7 +44,7 @@ class ClienteController extends Controller
 
   }
   public function show($id){
-    return view('venta.cliente.show',["persona"=>Persona::findOrFail($id)]);
+    return view('ventas.cliente.show',["persona"=>Persona::findOrFail($id)]);
   }
 
   public function edit($id){
@@ -51,7 +53,8 @@ class ClienteController extends Controller
   public function update(PersonaFormRequest $request,$id){
   $persona=Persona::findOrFail($id);
   $persona->nombre=$request->get('nombre');
-  $persona->num_documento=$request->get('tipo_documento');
+  $persona->tipo_documento=$request->get('tipo_documento');
+  $persona->num_documento=$request->get('num_documento');
   $persona->dirreccion=$request->get('dirreccion');
   $persona->telefono=$request->get('telefono');
   $persona->email=$request->get('email');

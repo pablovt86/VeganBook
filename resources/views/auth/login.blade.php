@@ -4,9 +4,8 @@
 <div class="container">
     <div class="row justify-content-center pt-5 mt-4">
         <div class="col-md-8">
-            <div class="card" style="border: 0px">
-                <div class="titulos card-header" style="background-color:#000000">BIENVENIDX A VEGANBOOK!</div>
-
+            <div class="card" style="border:0px">
+                <div class="titulos card-header" style="background-color:#000000">ACCESO AL SISTEMA!</div>
                 <div class="card-body" style="background-color:#141414">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

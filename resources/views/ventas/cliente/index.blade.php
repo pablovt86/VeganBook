@@ -32,7 +32,7 @@
 
 
           <td>
-          <a href="{{URL::action('ClienteController@edit',$per->idpersona)}}">  <button class="btn btn-info"> editar</buttom></a>
+          <a href="{{URL::action('ClienteController@edit',$per->idpersona)}}">  <button class="btn btn-info"> editar</button></a>
             <a href=""data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger">eliminar categoria</button></a>
           </td>
 
