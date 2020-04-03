@@ -42,7 +42,7 @@
                             </select>
                             <span style="color:white">solo disponible en argentina</span>
                             <br>
-                            <button type="button" id="btn-siguienteSeccion">Siguiente</button>
+                            <button class="btn btn-primary" type="button" id="btn-siguienteSeccion">Siguiente</button>
                         </div>
                         <div id="segundaParte">  <!-- formulario standar -->
                           <div class="form-group row"> <!-- name -->
@@ -164,7 +164,7 @@
                           <div class="form-group row mb-0"> <!-- submit -->
                               <div class="col-md-6 offset-md-4">
                                   <button type="submit" class="btn btn-primary">
-                                      {{ __('validar') }}
+                                      {{ __('Registrarme') }}
                                   </button>
                               </div>
                           </div>

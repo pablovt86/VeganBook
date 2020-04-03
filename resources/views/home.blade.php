@@ -88,13 +88,13 @@
                   </li>
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="almacen/articulo">sube tu articulo</a>
+                      <a class="nav-link" href="almacen/articulo">Subir articulo</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="almacen/categoria">sube la categoria</a>
+                      <a class="nav-link" href="almacen/categoria">Subir categoria</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="ventas/cliente">nuestro clientes</a>
+                      <a class="nav-link" href="ventas/cliente">Nuestros clientes</a>
                     </li>
         
              
@@ -102,11 +102,11 @@
                   </ul>
                   <div class="collapse navbar-collapse" id="navbarNav">
        
-                    <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
-                      <option value="red">rojo</option>
-                      <option value="blue">azul</option>
-                      <option value="green">green</option>
-                      <option value="black">negro</option>
+                    <select class="nav-link" name="fondo" id="fondo" onchange="cambiarFondo(this)">
+                      <option value="red"> Rojo</option>
+                      <option value="blue">Azul</option>
+                      <option value="green">Verde</option>
+                      <option value="black">Negro</option>
           
                       </select>
           
@@ -140,7 +140,7 @@
 </div>
 </nav>
       
-<section id="contenido">
+<section class="contenido">
   <article class="contenedor">        
     <div class="row">
       <div class="col-12">       
@@ -148,7 +148,7 @@
         @forelse ($posts as $post)
         {{$post->textarea}}
         @empty
-        no se encuentra tu posteo
+        <p style="width:160%; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Actualmente no realizo ningun posteo.</p>
         @endforelse
 
 
@@ -221,21 +221,16 @@
           <div class="row">
             <div class="col-12">
           <h3>Veganbook</h3>
-          <p>es una pagina creada para los usuarios veganos</p> 
-          donde pueden publicar sus articulos 
-          <p>interactuar con otro usuarios </p>
-          <p>intercambiar recetas veganas</p>
-          <p>hacer medicamentos caseros con hierbas medicinales</p>
-           ---------------------------
+          <p>Es una pagina creada para lxs usuarios veganos 
+          donde pueden publicar sus articulos.</p>
+          <p>Interactuar con otro usuarios</p>
+          <p>Intercambiar recetas veganas</p>
+           -----------------------------------
            <h5>Articulos</h5>
            -----------------------------
            <p>
-             <<----a tu izquierda mira los artiticulos activos</p>
-           -----------------------------
-           <h5>Redes</h5>
-           ------------------------------
-             <p>  a tu derecha RedesSociales--></p>
-           ----------------------------
+             <<----A tu izquierda podes ver los artiticulos activos</p>
+           ---------------------------------
            <h5>Saludos</h5> 
            ------------------------------  
           
@@ -271,12 +266,7 @@
               <i class="fa fa-instagram"></i>
             </a>
               <p>2020 © VeganBook.com Todos los derechos reservados </p>                           
-        </footer>
-
-
-
-        
-                    
+        </footer>    
         <script src="js/cambio.js"></script>     
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/jquery.bxslider.min.js"></script>

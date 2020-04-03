@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
   <div class="col-lg-8 col-md-8 col-xs-12">
-    <h3>listado de articulo<a href="articulo/create"><button class="btn btn-success">nuevo</button></a></h3>
+    <h3>Lista de articulos<a href="articulo/create"><button style="margin-left:10px" class="btn btn-success ">Nuevo</button></a></h3>
  @include('almacen.articulo.search')
   </div>
 </div>

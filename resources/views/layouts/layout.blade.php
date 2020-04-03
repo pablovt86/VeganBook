@@ -29,14 +29,6 @@
 
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-<style>
-#carrusel{
-
-  width:120px;
-  margin: 0 auto;
-}
-</style>
-
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -68,7 +60,7 @@
                   <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">Registro</a>
+                  <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/aboutUs">Acerca de Veganbook</a>
