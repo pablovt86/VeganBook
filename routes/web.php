@@ -28,9 +28,11 @@ Route::resource('ventas/cliente','ClienteController');
 Route::resource('almacen/compras/proveedor', 'ProveedoresController');
 Route::resource('almacen/compras/ingreso', 'IngresoController');
 Route::resource('ventas/venta','VentaController');
+Route::resource('seguridad/usuario','UsuarioController');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/{slug?}', 'HomeController@index');
  
 Route::post('/home', 'HomeController@index')->name('home');
 

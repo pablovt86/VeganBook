@@ -1,4 +1,18 @@
 
+<meta http-equiv="refresh" content="0; ventas/venta" />
+
+
+
+
+
+
+
+
+{{-- 
+
+
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -16,10 +30,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <link rel="stylesheet" href="css/jquery.bxslider.css">
-    {{-- <script src="js/bienvenida.js" language="JavaScript" type="text/javascript">
+    {<script src="js/bienvenida.js" language="JavaScript" type="text/javascript">
   
      
-    </script>     --}}
+    </script>    
     
     </head>
     <body id="body" >
@@ -140,7 +154,7 @@
 
 
 
-    {{-- <div id ="carrusel" >
+    <div id ="carrusel" >
       <div> <img src="css/images/01.jpg"  alt=""></div>
       <div> <img src="css/images/10.jfif"  alt=""></div>
       <div> <img src="css/images/03.jpg"  alt=""></div>
@@ -149,7 +163,7 @@
      <div>  <img src="css/images/11.jfif"  alt=""></div> 
 
     </div>
-     --}}
+    
 
 
    
@@ -202,7 +216,6 @@
       </article>
       </section>
 
-      {{-- noticia y propagandas --}}
       <aside >
         <div class="propaganda">
           <div class="row">
@@ -225,17 +238,7 @@
            ----------------------------
            <h5>Saludos</h5> 
            ------------------------------  
-           {{-- <p>Gracias y saludo
-             a todos nuestros usuarios por postear 
-             y publicar tus articulos
-             gracias por confiar en nosotros 
-             este equipo de programadores
-             trabaja dia a dia para mojorar la 
-             calidad de nuestra pagina haciendola 
-             cada vez mas dinamica para la calidad 
-             nuestro usuarios. gracias lo saluda
-             VeganBook.... 
-           </p> --}}
+          
 
 
 
@@ -285,7 +288,6 @@
              pause:1750,
             });
           });       
-   // busca algo cuando el usuario le de click a eso ejecuta la funcion
      $('.footer').on('click',function(){
               console.log();
          });
@@ -297,6 +299,6 @@
     </body>
    
 
-</html>
+</html> 
 
-
+ --}}
